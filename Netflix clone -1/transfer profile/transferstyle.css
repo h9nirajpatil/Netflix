@@ -1,0 +1,157 @@
+:root{
+    --color-orange: #FF3800;
+    --color-blue: #1F75FE;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+header{
+    width: 100vw;
+    border-bottom: 1px solid rgb(198, 190, 190);
+}
+
+header .heading{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+    margin: 0;
+}
+
+header .heading img{
+    width: 10rem;
+}
+
+header .heading a{
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+main .container{
+    width: 32rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+
+main .container h2{
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+
+main .container .profile{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+main .container .profile img{
+    width: 6rem;
+    height: auto;
+    border-radius: 10px;
+}
+
+main .container .profile h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .container #btn1{
+    color: var(--color-blue);
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+
+main .container .btn{
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+main .container .btn button{
+    padding: 0.8rem 2rem;
+    width: 70%;
+    background:  var(--color-orange);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+main .container #btn2{
+    margin-top: 1rem;
+    font-weight: 600;
+    color: black;
+}
+
+main .notes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .notes h3{
+    margin: 2rem 0;
+    font-size: 1.5rem;
+}
+
+main .notes .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 80%;
+}
+
+main .notes .content i{
+    color: var(--color-orange);
+    font-size: 1.3rem;
+}
+
+main .notes .content p{
+    text-align: start;
+    padding-left: 1.5rem;
+}
+
+main .notes .content #note{
+    margin-left: 1.5rem;
+    font-style: italic;
+}
+
+@media screen and (max-width: 576px) {
+    main .container{
+        width: 90%;
+    }
+}

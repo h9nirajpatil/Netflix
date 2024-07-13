@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(240, 236, 230);
+}
+
+.body {
+    height: 900px;
+    width: 100vw;
+    margin-left: 150px;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+img {
+    width: 2rem;
+  }
+
+  .logo {
+    margin-top: 0.4rem;
+    width: 8rem;
+  }
+  .nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width:95vw;
+    padding: 30px 30px;
+    z-index: 999;
+  }
+  .nav-3 {
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(244, 173, 68);
+  }
+  .btn-logout {
+    border: 1px solid blanchedalmond;
+    font-size: 22px;
+    font-weight: 600;
+    color: black;
+  }
+  .text-underline {
+    cursor: pointer;
+  }
+  a {
+    text-decoration: none;
+    list-style: none;
+  }
+
+.first {
+    margin-top: 35px;
+
+
+}
+
+.first h4 {
+    margin-top: 15px;
+    font-weight: 300;
+}
+
+.second {
+    height: 150px;
+    width: 785px;
+    border: 2px solid silver;
+    cursor: pointer;
+  
+padding-left: 15px;
+}
+
+.second0 {
+    cursor: pointer;
+    height: 320px;
+    width: 800px;
+    border: 2px solid silver;
+    margin-top: 10px;
+}
+
+
+.second .sec_in {
+    margin-top: 10px;
+    padding: 10px 40px;
+    border-radius: 20px;
+    color: white;
+    background-color: blue;
+    border: 1px solid transparent;
+    display: inline-block;
+
+
+}
+
+.second .sce_mid h4 {
+
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.second0 .sce_mid {
+    margin-top: 15px;
+    margin-left: 20px;
+
+
+}
+
+.sec_mid1{
+display: flex;
+flex-direction: row;
+margin-top: 15px;
+
+}
+.sec_mid1 span {
+
+    height: 16px;
+    width: 16px;
+    background-color: blue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    
+}
+.sec_end{
+    width:765px;
+    display: flex;
+    justify-content: space-between;
+   margin-top: 15px;
+}
+hr{
+    margin-top: 25px;
+}
+
+
+
+.last{
+
+ height: 40px;
+    width: 800px;
+    border: 2px solid silver;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    font-size: larger;
+   cursor: pointer;
+}
+.line{
+    margin-top: 15px;
+    height: 5px;
+    width: 803px;
+    background-color: blue;
+    border-radius: 20%;
+  
+}
+ 
+

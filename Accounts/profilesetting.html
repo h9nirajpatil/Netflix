@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Setting</title>
+    <link rel="stylesheet" href="profilesetting.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onscroll="property()">
+    <header>
+        <div class="heading">
+            <img src="netflixlogo.png" alt="">
+            <a href="/Accounts/Account.html">
+                <h3>Back</h3>
+            </a>
+        </div>
+    </header>
+    <div class="profile" id="profile">
+        <div class="details" id="details">
+            <h2>Profile Setting</h2>
+            <p>for <span>
+                    <script>document.write(localStorage.getItem('email1'));</script>
+                </span> <img src="profile.jpg" alt=""></p>
+        </div>
+    </div>
+
+    <div class="explore">
+
+
+        <div class="division">
+            <a href="#" style="color: black;">
+                <div class="icon">
+                    <i class="fa-solid fa-lock"></i>
+                    <div class="items">
+                        <h3>Profile Lock</h3>
+                        <p>Requires a PIN to access this profile</p>
+                    </div>
+                </div>
+
+                <i class="fa-solid fa-angle-right"></i>
+            </a>
+
+            <a href="#" style="color: black;">
+                <div class="icon">
+                    <i class="fa-regular fa-envelope"></i>
+                    <div class="items">
+                        <h3>Email</h3>
+                        <p><span>
+                                <script>document.write(localStorage.getItem('email1'));</script>
+                            </span></p>
+                    </div>
+                </div>
+
+                <i class="fa-solid fa-angle-right"></i>
+            </a>
+        </div>
+
+        <p id="notes">The email associated with this profile is also used for account access and recovery. Visit <a
+                href="#">account security</a> to make changes</p>
+
+        <p id="title">Preferences</p>
+
+        <div class="division">
+            <a href="#" style="color: black;">
+                <div class="icon">
+                    <i class="fa-solid fa-language"></i>
+                    <div class="items">
+                        <h3>Languages</h3>
+                        <p>Set languages for display and audio</p>
+                    </div>
+                </div>
+
+                <i class="fa-solid fa-angle-right"></i>
+            </a>
+
+            <a href="#" style="color: black;">
+                <div class="icon">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <div class="items">
+                        <h3>Viewing restrictions</h3>
+                        <p>Edit maturity rating and title restrictions</p>
+                    </div>
+                </div>
+
+                <i class="fa-solid fa-angle-right"></i>
+            </a>
+
+            <a href="#" style="color: black;">
+                <div class="icon">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    <div class="items">
+                        <h3>Subtitle appearance</h3>
+                        <p>Customise the way subtitle appear</p>
+                    </div>
+                </div>
+
+                <i class="fa-solid fa-angle-right"></i>
+            </a>
+
+            <a href="#" style="color: black;">
+                <div class="icon">
+                    <i class="fa-solid fa-rotate"></i>
+                    <div class="items">
+                        <h3>Playback setting</h3>
+                        <p>Set autoplay and audio, video quality</p>
+                    </div>
+                </div>
+
+                <i class="fa-solid fa-angle-right"></i>
+            </a>
+
+            <a href="#" style="color: black;">
+                <div class="icon">
+                    <i class="fa-regular fa-bell"></i>
+                    <div class="items">
+                        <h3>Notification setting</h3>
+                        <p>Manage notifications for email,text,push</p>
+                    </div>
+                </div>
+
+                <i class="fa-solid fa-angle-right"></i>
+            </a>
+
+            <a href="#" style="color: black;">
+                <div class="icon">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <div class="items">
+                        <h3>Viewing activity</h3>
+                        <p>Manage viewing history and ratings</p>
+                    </div>
+                </div>
+
+                <i class="fa-solid fa-angle-right"></i>
+            </a>
+
+            <a href="#" style="color: black;">
+                <div class="icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <div class="items">
+                        <h3>Privacy and data setting</h3>
+                        <p>Manage usage of personal info</p>
+                    </div>
+                </div>
+
+                <i class="fa-solid fa-angle-right"></i>
+            </a>
+        </div>
+
+        <div class="division">
+            <a href="#" style="color: black;">
+                <div class="icon">
+                    <i class="fa-solid fa-tv"></i>
+                    <div class="items">
+                        <h3>TV animation effects</h3>
+                        <p>Reduce motion transition</p>
+                    </div>
+                </div>
+
+                <div class="checkbox-wrapper-64"><label class="switch"><input type="checkbox"><span
+                            class="slider"></span></label></div>
+            </a>
+        </div>
+
+        <div class="division">
+            <a href="#" style="color: black;">
+                <div class="icon">
+                    <i class="fa-regular fa-address-card"></i>
+                    <div class="items">
+                        <h3>Profile transfer</h3>
+                        <p>Copy this profile to another account</p>
+                    </div>
+                </div>
+
+                <i class="fa-solid fa-angle-right"></i>
+            </a>
+        </div>
+
+        <button><i class="fa-regular fa-trash-can"></i>
+            <h3>Delete Profile</h3>
+        </button>
+
+        <p id="notes" style="font-size: 1rem; padding-top: 1rem;">The primary profile account cannot be deleted.</p>
+
+    </div>
+
+    <!-- footer section start -->
+
+    <footer>
+        <h3>Questions? <a href="#">Contact us</a></h3>
+
+        <div class="footer-div">
+            <ul>
+                <li><a href="#">Investor Relation</a></li>
+                <li><a href="#">Media Center</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Coockie Preferences</a></li>
+                <li><a href="#">Term of Use</a></li>
+                <li><a href="#">Privacy Statement</a></li>
+                <li><a href="#">Audio and Subtitles</a></li>
+                <li><a href="#">Help Centre</a></li>
+                <li><a href="#">Gift Cards</a></li>
+            </ul>
+        </div>
+        <div class="code">
+            <a href="#">Service code</a>
+        </div>
+
+    </footer>
+
+    <!-- footer section end -->
+
+    <script>
+        function property() {
+            const profileElement = document.getElementById('profile');
+            const profileDatails = document.getElementById('details');
+
+            if (window.scrollY > 100) { // Adjust the value as needed
+                profileElement.style.boxShadow = 'rgba(0, 0, 0, 0.2) 0px 20px 30px';
+                // profileElement.style.textAlign = 'center';
+                profileDatails.style.alignItems = 'center';
+            }
+            else {
+                profileElement.style.boxShadow = 'none'; // Remove shadow when scrolled back up
+                // profileElement.style.textAlign = 'left';
+                profileDatails.style.alignItems = 'start';
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>

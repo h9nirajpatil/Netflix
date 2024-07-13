@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tagss for new branch -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="movies.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./responsive.css">
+    <title>Hello, world!</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    
+    <div style="position: relative;">
+    <!-- header -->
+    <nav class="navbar navbar-expand-lg netflix-navbar netflix-padding-left netflix-padding-right">
+      <div class="container-fluid">
+        <div class="netflix-row">
+          <div class="left d-flex align-items-center">
+            <a class="navbar-brand" href="#">
+              <img src="Netflix-Logo.png" alt="">
+            </a>
+            <div  class="netflix-nav">
+               <section>
+                <a href="index.html"><button>Home</button></a>&nbsp;&nbsp;
+                <a href="tv shows.html"><button>Tv Shows</button>&nbsp;&nbsp;
+                  <a href="movies.html"><button>Movies</button></a>&nbsp;&nbsp;
+                  <a href="news.html"><button>News & Popular</button></a>&nbsp;&nbsp;
+                  <a href="my list.html"><button>My List</button></a>&nbsp;&nbsp;
+                  <a href="#" style="color: white;text-decoration: none; padding-left: 300px;">Welcome: <span> <script>document.write(localStorage.getItem("email1"))</script></span></a>
+               </section>
+            </div>
+            <div class="netflix-dropdown-box dropdown">
+              <button class="netflix-dropdown dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Browse
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a href="#"><i class="fas fa-child"></i> Change Plan</a></li>
+                <li><a href="#"><i class="fas fa-user-edit"></i> Manage Profiles</a></li>
+                <li><a href="#"><i class="fas fa-exchange-alt"></i> Transfer Profile</a></li>
+                <li><a href="#"><i class="fas fa-user"></i> Account</a></li>
+                <li><a href="#"><i class="fas fa-question-circle"></i> Help Center</a></li>
+                <li><a href="#"><i class="fas fa-sign-out-alt"></i> Sign Out</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="right d-flex align-items-center">
+            <i class="bi bi-search"></i>
+            <i class="bi bi-bell-fill"></i>
+            <section class="netflix-profile">
+              <button class="profile-button">
+                <img src="netflex icon.jpg" alt="Profile Avatar" class="profile-avatar">
+              </button>
+              <div class="dropdown-menu">
+                <ul>
+                  <li><a href="/Netflix clone -1/subscription/plan.html">Change Plan</a></li>
+                  <li><a href="/Manage_Profile/manageprofile.html">Manage Profiles</a></li>
+                  <li><a href="/Netflix clone -1/transfer profile/transferprofile.html">Transfer Profile</a></li>
+                  <li><a href="/Accounts/Account.html">Account</a></li>
+                  <li><a href="/Netflix clone -1/help center/helpcenter.html">Help Center</a></li>
+                  <li><a href="/index.html">Sign Out</a></li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </nav>
+    </header>
+    <div class="">
+      <section class="netflix-home-video">
+         <div class="top"></div>
+         <div class="bottom"></div>
+         <video src="Prabhas - Salaar Telugu Trailer_HD_720p-(Hd9video).mp4" autoplay muted loop></video>
+         <div class="content">
+             <section class="left">
+                 <img src="." alt="">
+             
+                 <div class="d-flex mt-2">
+                   <button class="btn btn-light m-2" > <i class="bi bi-play-fill" style="color: black; padding: 0%;"></i> Play Now </button>
+                   <button class="btn btn-secondary m-2"><i class="bi bi-info-circle" style=" padding: 0%;"></i> More Info</button>
+                 </div>
+             </section>
+            
+         </div>
+       </section>
+      
+   </div>
+    <div class="carousel">
+        <h2 id="Trending">Trending Movies</h2>
+        <div class="carousel-inner">
+            <div class="carousel-item">
+             <img src="RRR.png" alt="Poster 1">
+                <button class="watch-now">Watch Now</button>
+            </div>
+            <div class="carousel-item">
+                <img src="salar.png" alt="Poster 2">
+                <button class="watch-now">Watch Now</button>
+            </div>
+            <div class="carousel-item">
+                <img src="Kantara.jpg" alt="Poster 3">
+                <button class="watch-now">Watch Now</button>
+            </div>
+            <div class="carousel-item">
+                <img src="Kaithi.jpg" alt="Poster 4">
+                <button class="watch-now">Watch Now</button>
+            </div>
+            <div class="carousel-item">
+                <img src="guntur.jpg" alt="Poster 5">
+                <button class="watch-now">Watch Now</button>
+            </div>
+            <div class="carousel-item">
+                <img src="darling.jpg" alt="Poster 2">
+                <button class="watch-now">Watch Now</button>
+            </div>
+            <div class="carousel-item">
+                <img src="Dunki.jpg" alt="Poster 2">
+                <button class="watch-now">Watch Now</button>
+            </div>
+            <div class="carousel-item">
+                <img src="vakeel.jpg" alt="Poster 2">
+                <button class="watch-now">Watch Now</button>
+            </div>
+            <div class="carousel-item">
+                <img src="vikram.jpg" alt="Poster 3">
+                <button class="watch-now">Watch Now</button>
+            </div>
+            <div class="carousel-item">
+                <img src="Leo.jpg" alt="Poster 4">
+                <button class="watch-now">Watch Now</button>
+            </div>
+            <div class="carousel-item">
+                <img src="gangubai.jpg" alt="Poster 5">
+                <button class="watch-now">Watch Now</button>
+            </div>
+            <div class="carousel-item">
+                <img src="Kgf2.jpg" alt="Poster 2">
+                <button class="watch-now">Watch Now</button>
+            </div>
+            <div class="carousel-item">
+                <img src="master.jpg" alt="Poster 2">
+                <button class="watch-now">Watch Now</button>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="movie-cards">
+        <h2 id="movies-heading">Movies</h2>
+        <div class="movie-card" data-lang="telugu">
+          <img src="RRR.png" alt="RRR">
+          <div class="overlay">
+            <button class="play-button"><i class="fas fa-play"></i></button>
+            <button class="watch-later-button">Watch Later</button>
+          </div>
+          <h3>RRR</h3>
+          <button class="watch-now">Watch Now</button>
+        </div>
+        <div class="movie-card" data-lang="kannada">
+          <img src="salar.png" alt="Salar">
+          <h3>Salar</h3>
+          <button class="watch-now">Watch Now</button>
+        </div>
+        <div class="movie-card" data-lang="hindi">
+          <img src="darling.jpg" alt="Darling">
+          <h3>Darling</h3>
+          <button class="watch-now">Watch Now</button>
+        </div>
+        <div class="movie-card" data-lang="tamil">
+          <img src="manjummel.jpg" alt="Manjummel Boys">
+          <h3>Manjummel Boys</h3>
+          <button class="watch-now">Watch Now</button>
+        </div>
+        <div class="movie-card" data-lang="telugu">
+          <img src="vakeel.jpg" alt="Vakeel Saab">
+          <h3>Vakeel Saab</h3>
+          <button class="watch-now">Watch Now</button>
+        </div>
+        <div class="movie-card" data-lang="kannada">
+          <img src="permalu.jpg" alt="Premalu">
+          <h3>Premalu</h3>
+          <button class="watch-now">Watch Now</button>
+        </div>
+        <div class="movie-card" data-lang="hindi">
+          <img src="master.jpg" alt="Master">
+          <h3>Master</h3>
+          <button class="watch-now">Watch Now</button>
+        </div>
+        <div class="movie-card" data-lang="telugu">
+          <img src="guntur.jpg" alt="Guntur Karam">
+          <h3>Guntur Karam</h3>
+          <button class="watch-now">Watch Now</button>
+        </div>
+        <div class="movie-card" data-lang="hindi">
+          <img src="vikram.jpg" alt="Vikram">
+          <h3>Vikram</h3>
+          <button class="watch-now">Watch Now</button>
+        </div>
+        <div class="movie-card" data-lang="hindi">
+          <img src="gangubai.jpg" alt="Gangubai">
+          <h3>Gangubai</h3>
+          <button class="watch-now">Watch Now</button>
+        </div>
+        <div class="movie-card" data-lang="telugu">
+          <img src="pushpa.jpg" alt="Pushpa The Rise">
+          <h3>Pushpa The Rise</h3>
+          <button class="watch-now">Watch Now</button>
+        </div>
+        <div class="movie-card" data-lang="kannada">
+          <img src="Kantara.jpg" alt="Kantara">
+          <h3>Kantara</h3>
+          <button class="watch-now">Watch Now</button>
+        </div>
+        <div class="movie-card" data-lang="hindi">
+          <img src="jawan.jpg" alt="Jawan">
+          <h3>Jawan</h3>
+          <button class="watch-now">Watch Now</button>
+        </div>
+        <div class="movie-card" data-lang="hindi">
+          <img src="Dunki.jpg" alt="Dunki">
+          <h3>Dunki</h3>
+          <button class="watch-now">Watch Now</button>
+        </div>
+        <div class="movie-card" data-lang="tamil">
+          <img src="Jailer.png" alt="Jailer">
+          <h3>Jailer</h3>
+          <button class="watch-now">Watch Now</button>
+        </div>
+        <div class="movie-card" data-lang="tamil">
+          <img src="Leo.jpg" alt="Leo">
+          <h3>LEO</h3>
+          <button class="watch-now">Watch Now</button>
+        </div>
+        <div class="movie-card" data-lang="telugu">
+          <img src="Bro.jpg" alt="bro">
+          <h3>Bro</h3>
+          <button class="watch-now">Watch Now</button>
+        </div>
+        <div class="movie-card" data-lang="telugu">
+          <img src="julayi.jpg" alt="julayi">
+          <h3>julayi</h3>
+          <button class="watch-now">Watch Now</button>
+        </div>
+        <div class="movie-card" data-lang="kannada">
+          <img src="Kgf2.jpg" alt="kgf2">
+          <h3>KGF2</h3>
+          <button class="watch-now">Watch Now</button>
+        </div>
+        <div class="movie-card" data-lang="kannada">
+          <img src="yuvarathna.jpg" alt="yuvarathna">
+          <h3>yuvarathna</h3>
+          <button class="watch-now">Watch Now</button>
+        </div>
+        <div class="movie-card" data-lang="hindi">
+          <img src="pathaan.jpg" alt="pathaan">
+          <h3>pathaan</h3>
+          <button class="watch-now">Watch Now</button>
+        </div>
+        <div class="movie-card" data-lang="tamil">
+          <img src="Varisu.jpg" alt="Varisu">
+          <h3>Varisu</h3>
+          <button class="watch-now">Watch Now</button>
+        </div>
+        <div class="movie-card" data-lang="kannada">
+          <img src="ugram.jpg" alt="ugram">
+          <h3>Ugram</h3>
+          <button class="watch-now">Watch Now</button>
+        </div>
+        <div class="movie-card" data-lang="tamil">
+          <img src="Thunivu.jpg" alt="Thunivu">
+          <h3>Thunivu</h3>
+          <button class="watch-now">Watch Now</button>
+        </div>
+        <div class="movie-card" data-lang="tamil">
+          <img src="Kaithi.jpg" alt="Kaithi">
+          <h3>Kaithi</h3>
+          <button class="watch-now">Watch Now</button>
+        </div>
+      </section>
+    </main>
+  
+    <footer class="footer">
+      <p>Netflix &copy; 2024</p>
+    </footer>
+    <script src="movies.js"></script>
+  
+  </body>
+  
+  
+</body>
+</html>

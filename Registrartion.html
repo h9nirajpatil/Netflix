@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registration.css">
+    <title>Registration</title>
+</head>
+<body>
+    <header class="showcase">
+        
+
+        <div class="logo">
+            <img src="/images/images/logo.png">
+        </div>
+
+        <div class="showcase-content">
+            <div class="formm">
+                <form>
+                    <form>
+                        <h1>Sign Up</h1>
+                        <div class="info">
+                            <input id="1" class=" email" type="First Name" placeholder="FirstName"> <br>
+                            <input id="2" class="email" type="Last Name" placeholder="LastName">   <br>
+                            <input id="3" class=" email" type="email" placeholder="email"> <br>
+                            <input id="4" class=" email" type="password" placeholder="Password">
+                        </div>
+                        <div class="btn">
+                          <button onclick="Signup()" class="btn-primary" > Sign Up</button>
+                        </div>
+                        <div class="help">
+                            <div>
+                                <input value="true" type="checkbox"><label>Remember me</label>
+                            </div>
+
+                            <a href="https://www.netflix.com/dz-en/LoginHelp">Need Help ?</a>
+                        
+                        </div>
+                        
+
+                    </form>
+    
+                </div>
+                
+               
+                <div class="signup">
+                    <p>Already Member?</p>
+                    <a href="index2.html">Sign in now</a>
+                </div>
+                <div class="more">
+                    <p>
+                        This page is protected by Google reCAPTCHA to ensure you're not a bot. <a href="#">Learn more.</a> 
+                    </p>
+                </div>
+
+
+            </div>
+
+         
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <footer>
+                
+                <div class="ftr-content">
+                    <div class="contact">
+                        <a href="#">Quesions? Contact us.</a>
+                    </div>
+                    <div class="ftr">
+                        <a href="#">FAQ</a>
+                        <a href="#">Help Centre</a>
+                        <a href="#">Terms of Use</a>
+                        <a href="#">Privacy</a>
+                        <a href="#">Cookie Preference</a>
+                        <a href="#">Corporate Information</a>
+                    </div>
+                    <div class="select">
+                        <select>
+                            <option>English</option>
+                            <option>हिंदी</option>
+
+                            
+                        </select>
+                    </div>
+                </div>
+               
+            </footer>
+       
+    </header>
+
+    <script>
+    function Signup(){
+     let Fname=document.getElementById("1").value;
+     let Lname=document.getElementById("2").value;
+     let email=document.getElementById("3").value;
+     let password=document.getElementById("4").value;
+
+
+
+    localStorage.setItem("fname1", Fname)
+    localStorage.setItem("lname1", Lname)
+    localStorage.setItem("email1", email)
+    localStorage.setItem("password1", password)
+    
+window.location.href="index.html";
+     alert("Singup Succesfully");
+
+    }
+
+    </script>
+</body>
+</html>

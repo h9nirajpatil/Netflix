@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skip</title>
+    <link rel="stylesheet" href="substyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        main .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 10rem;
+            width: 30rem;
+        }
+
+        main .container i{
+            font-size: 2rem;
+            color: #FF3800;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- header section start -->
+    <header>
+        <div class="heading">
+            <img src="netflixlogo.png" alt="">
+            <a href="#">
+                <h3>Sign Out</h3>
+            </a>
+        </div>
+    </header>
+    <!-- header section end -->
+
+    <!-- main section start -->
+    <main>
+        <div class="container">
+            <i class="fa-regular fa-circle-check"></i>
+            <h4>step 1 of 4</h4>
+            <h2>Great, now let us verify your email</h2>
+            <h3>Click the link we sent to <span id="email" style="font-weight: 600;"></span> to verify.
+                <br><br>
+                Verifying your email will improve account security and help you receive important Netflix
+                communications.
+            </h3>
+
+            <div class="btn"><button type="submit" id="skip-btn" onclick="window.location.href = 'step2.html'">Skip</button></div>
+
+        </div>
+    </main>
+    <!-- main section end -->
+
+    <!-- footer section start -->
+
+    <footer>
+        <h3>Questions? Call <a href="#">000-800-919-1694</a></h3>
+
+        <div class="footer-div">
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Netflix Shop</a></li>
+                <li><a href="#">Term of Use</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Coockie Preferences</a></li>
+                <li><a href="#">Corporate information</a></li>
+            </ul>
+        </div>
+        <div class="language">
+            <select name="lang" id="lang">
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+            </select>
+        </div>
+
+    </footer>
+
+    <!-- footer section end -->
+
+    <script src="plan.js"></script>
+
+
+</body>
+
+</html>

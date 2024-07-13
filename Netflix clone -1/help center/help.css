@@ -1,0 +1,478 @@
+:root {
+    --color-orange: #FF3800;
+    --color-blue: #1F75FE;
+    --color-gradient: rgba(red, blue, green, alpha);
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    width: 100vw;
+}
+
+header {
+    width: 100vw;
+    border-bottom: 1px solid rgb(198, 190, 190);
+    display: flex;
+    justify-content: center;
+}
+
+header .heading {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+    margin: 0;
+    width: 90%;
+}
+
+header .heading .left {
+    display: flex;
+    gap: 1rem;
+}
+
+header .heading .left img {
+    width: 6rem;
+}
+
+header .heading .left h3 {
+    display: inline;
+    border-left: 1px solid rgb(198, 190, 190);
+    padding-left: 1rem;
+    color: gray;
+    font-weight: 500;
+}
+
+
+.arrow-container {
+    cursor: pointer;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 14px solid var(--color-orange);
+    transition: transform 0.3s ease;
+}
+
+.arrow.down {
+    transform: rotate(90deg);
+}
+
+.content {
+    display: none;
+    position: absolute;
+    margin-top: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 85%;
+    top: 5rem;
+    padding: 1rem;
+    margin: 0;
+}
+
+.content.show {
+    display: flex;
+}
+
+header .heading .right {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+header .heading .content .main-data {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+}
+
+header .heading .content i {
+    color: var(--color-orange);
+    font-size: 1.5rem;
+}
+
+header .heading .content h3 {
+    font-size: 1rem;
+}
+
+header .heading .content p {
+    color: gray;
+    font-size: 0.9rem;
+}
+
+header .heading .content a {
+    width: 10rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-orange);
+    color: white;
+    border-radius: 5px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+main .search {
+    width: 32rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 12rem;
+}
+
+main .search h2 {
+    font-size: 2rem;
+    margin: 1rem 0;
+    max-width: 100vw;
+}
+
+main .search .searchbox i {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    padding-top: 1rem;
+    font-size: 1.2rem;
+    color: gray;
+}
+
+main .search .searchbox input {
+    height: 3rem;
+    border: 2px solid transparent;
+    border-image: linear-gradient(45deg, rgb(231, 57, 199), rgb(165, 85, 230));
+    border-image-slice: 2;
+    width: 95%;
+    font-size: 1rem;
+    padding-left: 3rem;
+    margin-bottom: 1rem;
+}
+
+
+main .search .extra-content {
+    display: flex;
+    flex-direction: row;
+    color: gray;
+}
+
+main .search .extra-content a {
+    text-decoration: underline;
+    color: gray;
+}
+
+.explore {
+    margin-top: 10rem;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.explore .text {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.explore .division {
+    width: 30rem;
+    border: 1px solid rgb(204, 199, 199);
+    border-radius: 10px;
+    margin: 1rem 0;
+    padding: 0 0.5rem;
+}
+
+.explore .division .user {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.explore .division .user i {
+    color: darkred;
+}
+
+.collapsible {
+    cursor: pointer;
+    padding: 0.5rem;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    background: none;
+    width: 100%;
+    border-top: 1px solid rgb(204, 199, 199);
+    padding: 0.5rem;
+    font-weight: 600;
+    transition: all 300ms ease;
+    display: flex;
+    justify-content: space-between;
+}
+
+.collapsible h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(83, 82, 82);
+}
+
+
+/* .collapsible:after {
+    content: '>';
+    color: black;
+    font-weight: bold;
+    float: right;
+}
+
+.active:after {
+    content: "v";
+} */
+
+.col-content {
+    padding: 2rem 18px;
+    display: none;
+    transition: max-height 0.2s ease-out;
+    max-height: 0;
+    width: 100%;
+    padding: 0;
+    transition: all 300ms ease;
+    padding: 0.5rem;
+}
+
+.explore .division .collapsible.active+.col-content {
+    display: block;
+    max-height: 1000px;
+}
+
+.links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.links .inside {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.links .inside h3 {
+    margin-bottom: 0.5rem;
+}
+
+.links .inside ul {
+    list-style-type: none;
+    text-decoration: none;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.links .inside ul li {
+    display: flex;
+    gap: 1rem;
+    margin: 0.5rem 0;
+    border-top: 1px solid rgb(172, 169, 169);
+    padding-top: 0.5rem;
+}
+
+.links .inside ul li i {
+    font-size: 0.8rem;
+}
+
+.links .inside ul li a {
+    color: black;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.links .more {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.links .more a {
+    background: black;
+    color: white;
+    padding: 1rem 2.5rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+}
+
+footer {
+    width: 100vw;
+    background: rgb(246, 244, 244);
+    margin-top: 1rem;
+    padding: 2rem 8rem;
+}
+
+footer ul li {
+    list-style-type: none;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+footer ul li a {
+    color: gray;
+    text-decoration: underline;
+}
+
+
+
+
+/* media queries */
+
+@media screen and (max-width: 576px) {
+    header .heading {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+        margin: 0;
+        width: 90%;
+    }
+
+    .content {
+        display: none;
+        position: absolute;
+        gap: 0.5rem;
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        width: 85%;
+        top: 5rem;
+        padding: 1rem;
+        margin: 0;
+    }
+
+    header .heading .content a {
+        width: 5rem;
+        height: 4rem;
+        padding: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+        background-color: var(--color-orange);
+        color: white;
+        border-radius: 5px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    main .search {
+        width: 20rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        margin-top: 12rem;
+    }
+
+    main .search h2 {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+        max-width: 100vw;
+    }
+
+    .explore {
+        margin-top: 10rem;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .explore .division {
+        width: 30rem;
+        border: 1px solid rgb(204, 199, 199);
+        border-radius: 10px;
+        margin: 1rem 0;
+        padding: 0 0.5rem;
+        width: 90%;
+    }
+
+    .links {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .links .inside {
+        width: 30rem;
+        width: 90%;
+    }
+
+    .links .inside ul {
+        width: 100%;
+    }
+
+    .content {
+        display: none;
+        position: absolute;
+        margin-top: 20px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        width: 85%;
+        top: 5rem;
+        padding: 1rem;
+        margin: 0;
+    }
+
+    .content.show {
+        display: flex;
+    }
+
+}
+
+@media screen and (max-width: 768px) and (min-width:579px) {
+    header .heading .content a {
+        width: 12rem;
+        height: 2rem;
+        padding: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+        background-color: var(--color-orange);
+        color: white;
+        border-radius: 5px;
+    }
+}

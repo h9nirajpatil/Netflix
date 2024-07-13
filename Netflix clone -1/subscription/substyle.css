@@ -1,0 +1,277 @@
+:root {
+    --color-orange: #FF3800;
+    --color-blue: #1F75FE;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    width: 100vw;
+    border-bottom: 1px solid rgb(198, 190, 190);
+}
+
+header .heading {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+    margin: 0.8rem;
+}
+
+header .heading img {
+    width: 10rem;
+}
+
+header .heading a {
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .heading a:hover {
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+main .container {
+    width: 28rem;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+main .container h4 {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 0.8rem;
+}
+
+main .container h2 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+main .container h3 {
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+main .container .email {
+    margin: 1.5rem 0;
+}
+
+main .container .email span {
+    font-weight: 600;
+}
+
+
+main .container input:focus::-webkit-input-placeholder {
+    font-size: 0.75rem;
+    position: relative;
+    top: -15px;
+    transition: 0.2s ease-out;
+}
+
+main .container input::-webkit-input-placeholder {
+    transition: 0.2s ease-in;
+}
+
+main .container input[type="text"]:focus,
+main .container input[type="password"]:focus {
+    height: 50px;
+    padding-bottom: 0px;
+    transition: 0.2s ease-in;
+}
+
+main .container input[type="text"],
+main .container input[type="password"] {
+    height: 50px;
+    transition: 0.2s ease-in;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+main .container .forgot h3 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: var(--color-blue);
+}
+
+main .container .forgot h3:hover {
+    text-decoration: underline;
+}
+
+
+main .container #btn1 {
+    color: var(--color-blue);
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+
+main .container .btn {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+main .container .btn button {
+    padding: 0.8rem 2rem;
+    width: 100%;
+    background: var(--color-orange);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 400;
+    height: 4rem;
+}
+
+main .container .btn #skip-btn {
+    padding: 0.8rem 2rem;
+    width: 100%;
+    background: rgb(212, 211, 211);
+    border: none;
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+    height: 3rem;
+    margin-top: 2rem;
+    transition: all 300ms ease;
+}
+
+main .container .btn #skip-btn:hover {
+    background: rgb(227, 223, 223);
+}
+
+footer {
+    width: 100vw;
+    background: rgb(246, 244, 244);
+    padding: 2rem 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+
+}
+
+footer h3 {
+    color: gray;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+footer h3 a {
+    color: gray;
+}
+
+footer h3 a:hover {
+    text-decoration: underline;
+}
+
+footer .footer-div {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+}
+
+.footer-div ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    gap: 1rem;
+    justify-content: start;
+}
+
+footer .footer-div ul li {
+    list-style-type: none;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    /* margin-right: 3rem; */
+}
+
+footer ul li a {
+    color: gray;
+}
+
+footer ul li:hover {
+    text-decoration: underline;
+}
+
+.language {
+    position: relative;
+    display: inline-block;
+}
+
+.language select {
+    appearance: none;
+    background: #fff;
+    border: 2px solid black;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    padding-left: 2.5rem;
+    color: gray;
+}
+
+.language select option{
+    height: 2rem;
+}
+
+.language::before {
+    content: "\f0ac";
+    /* Font Awesome globe icon */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 800;
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: gray;
+}
+
+
+
+/* media queries */
+
+@media screen and (max-width: 576px) {
+    main .container {
+        width: 90%;
+    }
+}

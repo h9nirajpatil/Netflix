@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Password</title>
+    <link rel="stylesheet" href="substyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- header section start -->
+    <header>
+        <div class="heading">
+            <img src="netflixlogo.png" alt="">
+            <a href="#">
+                <h3>Sign In</h3>
+            </a>
+        </div>
+    </header>
+    <!-- header section end -->
+
+    <!-- main section start -->
+    <main>
+        <div class="container">
+            <h4>step 1 of 4</h4>
+            <h2>Welcome back! <br>
+                Joining Netflix is easy.</h2>
+            <h3>Enter your password and you'll be watching in no time.</h3>
+            <div class="email">
+                <h3>Email :</h3>
+                <span id="email"></span>
+            </div>
+
+            <input type="password" placeholder="Enter your password" class="inputText" id="inputPass" required>
+
+            <a href="#" class="forgot">
+                <h3>Forgot your password?</h3>
+            </a>
+
+            <div class="btn"><button type="submit" id="submit-btn" onclick="moveToNext()">Next</button></div>
+
+        </div>
+    </main>
+    <!-- main section end -->
+
+    <!-- footer section start -->
+
+    <footer>
+        <h3>Questions? Call <a href="#">000-800-919-1694</a></h3>
+
+        <div class="footer-div">
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Netflix Shop</a></li>
+                <li><a href="#">Term of Use</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Coockie Preferences</a></li>
+                <li><a href="#">Corporate information</a></li>
+            </ul>
+        </div>
+        <div class="language">
+            <select name="lang" id="lang">
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+            </select>
+        </div>
+
+    </footer>
+
+    <!-- footer section end -->
+
+    <script src="plan.js"></script>
+
+    <script>
+
+        function moveToNext() {
+
+            const password = localStorage.getItem('password1');
+            const enteredPassword = document.getElementById('inputPass').value;
+
+            if (password === enteredPassword) {
+                window.location.href = "../subscription/skip.html";
+            }
+            else {
+                alert('Wrong password...Enter again');
+            }
+        }
+    </script>
+
+</body>
+
+</html>

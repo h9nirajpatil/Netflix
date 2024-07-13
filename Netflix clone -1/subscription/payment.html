@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 4</title>
+    <link rel="stylesheet" href="substyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+
+    <style>
+        main .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 5rem;
+            width: 25rem;
+        }
+
+        main .container h2 {
+            font-weight: 550;
+        }
+
+        main .container h3 {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+        }
+
+        main .container i {
+            font-size: 2.5rem;
+            color: #FF3800;
+            margin-bottom: 1rem;
+        }
+
+        main .container .btn {
+            margin: 3rem 0;
+        }
+
+        main .container .btn button {
+            background: transparent;
+            border: 1px solid gray;
+            color: black;
+            text-align: left;
+            font-size: 1.5rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        main .container .btn button img {
+            height: 1.6rem;
+        }
+
+        main .container .btn button i {
+            color: black;
+            font-size: 1.3rem;
+            position: relative;
+            right: 0;
+            top: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- header section start -->
+    <header>
+        <div class="heading">
+            <img src="netflixlogo.png" alt="">
+            <a href="#">
+                <h3>Sign Out</h3>
+            </a>
+        </div>
+    </header>
+    <!-- header section end -->
+
+    <!-- main section start -->
+    <main>
+        <div class="container">
+            <i class="fa-regular fa-circle-stop"></i>
+            <h4>step 4 of 4</h4>
+            <h2>Choose how to pay</h2>
+
+            <h3>Your payment is encrypted and you can change your payment method at anytime.</h3>
+            <h3><strong>Secure for peace of mind. <br>Cancel easily online.</strong></h3>
+
+            <div class="btn">
+                <button type="submit" id="rzp-button1">Razorpay <img
+                        src="https://www.pngplay.com/wp-content/uploads/8/Payment-Method-Download-Free-PNG.png" alt="">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+        </div>
+    </main>
+    <!-- main section end -->
+
+    <!-- footer section start -->
+
+    <footer>
+        <h3>Questions? Call <a href="#">000-800-919-1694</a></h3>
+
+        <div class="footer-div">
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Netflix Shop</a></li>
+                <li><a href="#">Term of Use</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Coockie Preferences</a></li>
+                <li><a href="#">Corporate information</a></li>
+            </ul>
+        </div>
+        <div class="language">
+            <select name="lang" id="lang">
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+            </select>
+        </div>
+
+    </footer>
+
+    <!-- footer section end -->
+
+    <script src="plan.js"></script>
+
+    <!-- Your script for Razorpay -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById("rzp-button1").onclick = function (e) {
+                e.preventDefault(); // Prevent default action if it's a form submit button
+
+                // Retrieve the selected price from local storage
+                let price = localStorage.getItem('selectedPrice');
+
+                // Validate the price
+                if (!price || isNaN(price)) {
+                    alert("Please select a plan before proceeding.");
+                    return; // Exit if the price is invalid
+                }
+
+                // Convert the price to paise
+                let amountInPaise = parseFloat(price) * 100;
+
+                // Razorpay options
+                var options = {
+                    key: "rzp_test_PV1oQ0oMtgXOsq", // Enter the Key ID generated from the Dashboard
+                    amount: amountInPaise, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+                    currency: "INR",
+                    name: "Membership",
+                    description: "This is your membership",
+                    image: "https://www.mintformations.co.uk/blog/wp-content/uploads/2020/05/shutterstock_583717939.jpg",
+                    theme: {
+                        color: "#000",
+                    },
+                    handler: function (response) {
+                        // Handle successful payment here
+                        alert(`Payment successful! Payment ID: ${response.razorpay_payment_id}`);
+                        // You can also send the payment ID to your server for further processing
+                        window.location.href = 'index.html'
+                    },
+                    prefill: {
+                        name: "John Doe", // Pre-fill customer name (you can replace with actual user data)
+                        email: "john.doe@example.com", // Pre-fill customer email
+                        contact: "9999999999" // Pre-fill customer contact
+                    },
+                    notes: {
+                        address: "Razorpay Corporate Office" // Add any custom notes here
+                    },
+                    modal: {
+                        ondismiss: function () {
+                            // Handle the case when the payment popup is closed
+                            console.log("Payment popup closed");
+                        }
+                    }
+                };
+
+                // Create and open the Razorpay payment form
+                var rzpy = new Razorpay(options);
+                rzpy.open();
+
+                // Handle payment form closure and payment failure
+                rzpy.on('payment.failed', function (response) {
+                    alert(`Payment failed! Error: ${response.error.description}`);
+                });
+            };
+        });
+    </script>
+</body>
+
+</html>

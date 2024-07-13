@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan</title>
+    <link rel="stylesheet" href="substyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        main {
+            height: auto;
+        }
+
+        main .container {
+            width: 70vw;
+            margin-bottom: 5rem;
+        }
+
+        main .container .main-plan {
+            display: flex;
+            gap: 1rem;
+        }
+
+        main .container .plan {
+            border: 1px solid gray;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 2rem;
+            height: 40rem;
+            overflow: hidden;
+            transition: box-shadow 0.3s;
+        }
+
+
+        main .container .plan .inner-div {
+            border-radius: 10px;
+            margin: 0.5rem;
+            height: 4.5rem;
+        }
+
+        main .container .plan .color1 {
+            background: rgb(36, 47, 156);
+            background: linear-gradient(135deg, rgba(36, 47, 156, 1) 0%, rgba(193, 46, 72, 1) 79%);
+        }
+
+        main .container .plan .color2 {
+            background: rgb(38, 48, 137);
+            background: linear-gradient(132deg, rgba(38, 48, 137, 1) 47%, rgba(141, 46, 193, 1) 84%);
+        }
+
+        main .container .plan .color3 {
+            background: rgb(38, 48, 137);
+            background: linear-gradient(132deg, rgba(38, 48, 137, 1) 47%, rgba(46, 94, 193, 1) 84%);
+        }
+
+        main .container .plan .color4 {
+            background: rgb(38, 48, 137);
+            background: linear-gradient(132deg, rgba(38, 48, 137, 1) 47%, rgba(46, 128, 193, 1) 84%);
+        }
+
+        main .container .plan .inner-div .content {
+            padding: 0.5rem;
+            color: white;
+        }
+
+        main .container .plan .inner-div .content h3 {
+            margin-bottom: 0.3rem;
+        }
+
+        main .container .plan .inner-div .content span i {
+            float: right;
+            display: none;
+        }
+
+        main .container .plan .description {
+            margin: 0.5rem;
+        }
+
+        main .container .plan .description .details {
+            margin: 1rem 0.5rem;
+            border-bottom: 1px solid gray;
+            padding-bottom: 1rem;
+        }
+
+        main .container .plan .description .details h4 {
+            text-transform: none;
+            font-weight: 600;
+            color: gray;
+        }
+
+        main .container .plan .description .details:last-child {
+            border: none;
+        }
+
+        main .container .plan .description .details h3 {
+            font-size: 1.2rem;
+        }
+
+        main .container .notes {
+            color: gray;
+            margin: 1rem 0;
+            text-transform: none;
+            line-height: 1.5rem;
+        }
+
+        main .container .btn button {
+            width: 30%;
+        }
+        
+        .description{
+            display: none;
+        }
+
+        @media (max-width: 496px) {
+
+            main .container .inner-div .content h3{
+                font-size: 0.8rem;
+                display: none;
+            }
+            main .container .inner-div .content h4{
+                font-size: 0.6rem;
+            }
+
+            main .container .plan .inner-div .content span i {
+            float: right;
+            display: none;
+            margin-top: 10px;
+        }
+        }
+
+        @media (min-width: 496px) and (max-width:768px) {
+            main .container .inner-div .content h3{
+                font-size: 0.8rem;
+            }
+        }
+        
+        @media (max-width: 1250px) {
+            .plan {
+                flex-basis: 100%;
+                /* Full width on smaller screens */
+                
+            }
+
+            .description.active {
+                display: block;
+                /* Show active description */
+                width: 100vw;
+                position: absolute;
+                left: 0;
+                padding: 0 5rem;
+
+            }
+
+            main .container .plan{
+                border: none;
+            }
+
+            main .container .btn button {
+            width: 15rem;
+        }
+
+        }
+
+        @media (min-width: 1250px){
+            main .container .plan .description {
+            margin: 0.5rem;
+            display: block;
+        }
+
+        main .container .plan .description .details {
+            margin: 1rem 0.5rem;
+            border-bottom: 1px solid gray;
+            padding-bottom: 1rem;
+        }
+
+        main .container .plan .description .details h4 {
+            text-transform: none;
+            font-weight: 600;
+            color: gray;
+        }
+
+        main .container .plan .description .details:last-child {
+            border: none;
+        }
+
+        main .container .plan .description .details h3 {
+            font-size: 1.2rem;
+        }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- header section start -->
+    <header>
+        <div class="heading">
+            <img src="netflixlogo.png" alt="">
+            <a href="#">
+                <h3>Sign out</h3>
+            </a>
+        </div>
+    </header>
+    <!-- header section end -->
+
+    <!-- main section start -->
+    <main>
+        <div class="container">
+            <h4>step 3 of 4</h4>
+            <h2>Choose the plan that’s right for you
+            </h2>
+            <div class="main-plan">
+                <div class="plan" onclick="selectPrice(649,this)">
+                    <div class="plan-div">
+                        <div class="inner-div color1">
+                            <div class="content">
+                                <h3>Premium</h3>
+                                <h4>4K + HDR</h4>
+                                <span><i class="fa-solid fa-circle-check" id="mark"></i></span>
+                            </div>
+                        </div>
+                        <div class="description plan1">
+                            <div class="details">
+                                <h4>Monthly price</h4>
+                                <h3>₹649</h3>
+                            </div>
+                            <div class="details">
+                                <h4>Video and sound quality</h4>
+                                <h3>Best</h3>
+                            </div>
+                            <div class="details">
+                                <h4>Resolution</h4>
+                                <h3>4K (Ultra HD) + HDR</h3>
+                            </div>
+                            <div class="details">
+                                <h4>Spatial audio (immersive sound)</h4>
+                                <h3>Included</h3>
+                            </div>
+                            <div class="details">
+                                <h4>Supported devices</h4>
+                                <h3>TV, computer, mobile phone, tablet</h3>
+                            </div>
+                            <div class="details">
+                                <h4>Devices your household can watch at the same time</h4>
+                                <h3>4</h3>
+                            </div>
+                            <div class="details">
+                                <h4>Download devices</h4>
+                                <h3>6</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="plan">
+                    <div class="plan-div" onclick="selectPrice(499,this)">
+                        <div class="inner-div color2">
+                            <div class="content">
+                                <h3>Standard</h3>
+                                <h4>1080p</h4>
+                                <span><i class="fa-solid fa-circle-check" id="mark"></i></span>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <div class="details">
+                                <h4>Monthly price</h4>
+                                <h3>₹499</h3>
+                            </div>
+                            <div class="details">
+                                <h4>Video and sound quality</h4>
+                                <h3>Great</h3>
+                            </div>
+                            <div class="details">
+                                <h4>Resolution</h4>
+                                <h3>1080p (Full HD)</h3>
+                            </div>
+                            <!-- <div class="details">
+                                <h4>Spatial audio (immersive sound)</h4>
+                                <h3>Included</h3>
+                            </div> -->
+                            <div class="details">
+                                <h4>Supported devices</h4>
+                                <h3>TV, computer, mobile phone, tablet</h3>
+                            </div>
+                            <div class="details">
+                                <h4>Devices your household can watch at the same time</h4>
+                                <h3>2</h3>
+                            </div>
+                            <div class="details">
+                                <h4>Download devices</h4>
+                                <h3>2</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="plan">
+                    <div class="plan-div" onclick="selectPrice(199,this)">
+                        <div class="inner-div color3">
+                            <div class="content">
+                                <h3>Basic</h3>
+                                <h4>720p</h4>
+                                <span><i class="fa-solid fa-circle-check" id="mark"></i></span>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <div class="details">
+                                <h4>Monthly price</h4>
+                                <h3>₹199</h3>
+                            </div>
+                            <div class="details">
+                                <h4>Video and sound quality</h4>
+                                <h3>Good</h3>
+                            </div>
+                            <div class="details">
+                                <h4>Resolution</h4>
+                                <h3>720p (HD)</h3>
+                            </div>
+                            <!-- <div class="details">
+                                <h4>Spatial audio (immersive sound)</h4>
+                                <h3>Included</h3>
+                            </div> -->
+                            <div class="details">
+                                <h4>Supported devices</h4>
+                                <h3>TV, computer, mobile phone, tablet</h3>
+                            </div>
+                            <div class="details">
+                                <h4>Devices your household can watch at the same time</h4>
+                                <h3>1</h3>
+                            </div>
+                            <div class="details">
+                                <h4>Download devices</h4>
+                                <h3>1</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="plan">
+                    <div class="plan-div" onclick="selectPrice(149,this)">
+                        <div class="inner-div color4">
+                            <div class="content">
+                                <h3>Mobile</h3>
+                                <h4>480p</h4>
+                                <span><i class="fa-solid fa-circle-check" id="mark"></i></span>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <div class="details">
+                                <h4>Monthly price</h4>
+                                <h3>₹149</h3>
+                            </div>
+                            <div class="details">
+                                <h4>Video and sound quality</h4>
+                                <h3>Fair</h3>
+                            </div>
+                            <div class="details">
+                                <h4>Resolution</h4>
+                                <h3>480p</h3>
+                            </div>
+                            <!-- <div class="details">
+                                <h4>Spatial audio (immersive sound)</h4>
+                                <h3>Included</h3>
+                            </div> -->
+                            <div class="details">
+                                <h4>Supported devices</h4>
+                                <h3>TV, computer, mobile phone, tablet</h3>
+                            </div>
+                            <div class="details">
+                                <h4>Devices your household can watch at the same time</h4>
+                                <h3>1</h3>
+                            </div>
+                            <div class="details">
+                                <h4>Download devices</h4>
+                                <h3>1</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h4 class="notes">HD (720p), Full HD (1080p), Ultra HD (4K) and HDR availability subject to your internet
+                service and device capabilities.
+                Not all content is available in all resolutions. See our Terms of Use for more details.
+                Only people who live with you may use your account. Watch on 4 different devices at the same time with
+                Premium, 2 with
+                Standard, and 1 with Basic and Mobile.
+            </h4>
+            <div class="btn">
+                <button type="submit" id="submit-btn" onclick="proceedToPayment()">Next</button>
+            </div>
+        </div>
+    </main>
+    <!-- main section end -->
+
+    <!-- footer section start -->
+
+    <footer>
+        <h3>Questions? Call <a href="#">000-800-919-1694</a></h3>
+
+        <div class="footer-div">
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Netflix Shop</a></li>
+                <li><a href="#">Term of Use</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Coockie Preferences</a></li>
+                <li><a href="#">Corporate information</a></li>
+            </ul>
+        </div>
+        <div class="language">
+            <select name="lang" id="lang">
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+            </select>
+        </div>
+
+    </footer>
+
+    <!-- footer section end -->
+
+    <script src="plan.js"></script>
+
+</body>
+
+</html>

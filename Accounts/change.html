@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Streaming Plan</title>
+    <link rel="stylesheet" href="change.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="/netflex clone/Netflix-Logo.png" alt="Nertflex Logo">
+        </div>
+        <div class="navbar-avatar">
+            <img src="/netflex clone/netflex icon.jpg" alt="User Avatar">
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Change Streaming Plan</h1>
+        <div class="plan-container">
+            <div class="plan" onclick="selectPlan(this)">
+                <div class="plan-details">
+                    <div class="plan-text">
+                        <h2>Mobile Plan</h2>
+                        <p>Good video quality in SD (480p). Watch ad-free on any phone or tablet. Computer and TV not included. Download on 1 device.</p>
+                    </div>
+                    <p class="price">₹149/month</p>
+                </div>
+            </div>
+            <div class="plan" onclick="selectPlan(this)">
+                <div class="plan-details">
+                    <div class="plan-text">
+                        <h2>Basic Plan</h2>
+                        <p>Good video quality in HD (720p). Watch ad-free on any phone, tablet, computer, or TV. Download on 1 device.</p>
+                    </div>
+                    <p class="price">₹199/month</p>
+                </div>
+            </div>
+            <div class="plan" onclick="selectPlan(this)">
+                <div class="plan-details">
+                    <div class="plan-text">
+                        <h2>Standard Plan</h2>
+                        <p>Great video quality in Full HD (1080p). Watch ad-free on any phone, tablet, computer, or TV. Download on 2 devices.</p>
+                    </div>
+                    <p class="price">₹499/month</p>
+                </div>
+            </div>
+            <div class="plan" onclick="selectPlan(this)">
+                <div class="plan-details">
+                    <div class="plan-text">
+                        <h2>Premium Plan</h2>
+                        <p>Our best video quality in Ultra HD (4K) and HDR. Watch ad-free on any phone, tablet, computer, or TV. Download on 6 devices.</p>
+                    </div>
+                    <p class="price">₹649/month</p>
+                </div>
+            </div>
+        </div>
+        <p class="info-paragraph">RCA is known for producing one of the most cost-effective 4K televisions that money can buy. While this could be considered a positive to some consumers, there is also a reason why these are the cheapest 4K televisions on the market
+</p>
+        <div class="action-buttons">
+            <button class="btn go-back">Go Back</button>
+            <button class="btn continue">Continue</button>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-links">
+            <div>
+                <p>Questions? Call 1-844-505-2993</p>
+            </div>
+            <div>
+                <a href="#">FAQ</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Ways to Watch</a>
+                <a href="#">Corporate Information</a>
+                <a href="#">Netflix Originals</a>
+            </div>
+            <div>
+                <a href="#">Help Center</a>
+                <a href="#">Jobs</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div>
+                <a href="#">Account</a>
+                <a href="#">Redeem Gift Cards</a>
+                <a href="#">Privacy</a>
+                <a href="#">Speed Test</a>
+            </div>
+            <div>
+                <a href="#">Media Center</a>
+                <a href="#">Buy Gift Cards</a>
+                <a href="#">Cookie Preferences</a>
+                <a href="#">Legal Notices</a>
+            </div>
+            <div>
+                <select>
+                    <option>English</option>
+                    <option>Spanish</option>
+                </select>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function selectPlan(planElement) {
+            const plans = document.querySelectorAll('.plan');
+            plans.forEach(plan => plan.classList.remove('selected'));
+            planElement.classList.add('selected');
+        }
+    </script>
+</body>
+</html>
